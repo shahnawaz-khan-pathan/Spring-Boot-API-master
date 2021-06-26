@@ -1,0 +1,13 @@
+version: '3'
+services:
+  java:
+    image: java_image
+    build: /home/ubuntu/java_project
+    container_name: java_container
+    environment:
+    - dbhost=terraform-20210602031040576400000001.cbrfa0gbtfxr.us-east-1.rds.amazonaws.com
+    - database=mytest
+    - dbuser=admin
+    - dbpassword=khan1234
+    ports:
+    - 8080:8080
